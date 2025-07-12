@@ -58,7 +58,7 @@ const Maps = () => {
               <div className="relative">
                 <Card className="bg-glass-bg border-glass-border backdrop-blur-glass p-8 shadow-glass">
                   <div className="aspect-[3/4] bg-gradient-dark rounded-lg flex items-center justify-center">
-                    <img src="/public/Image/Maps/BeyondtheValley.jpg" alt="Map of The Other Side" className="rounded-lg object-cover w-full h-full" />
+                    <img src="/Image/Maps/BeyondtheValley.jpg" alt="Map of The Other Side" className="rounded-lg object-cover w-full h-full" />
                   </div>
                 </Card>
               </div>

@@ -9,7 +9,7 @@ const characters = [
     name: "The Wanderer",
     role: "",
     description: "A nameless figure walking the path, carrying the burden of the past and the future, facing the unknown alone.",
-    image: "/public/Image/Characters/TheWanderer.jpg",
+    image: "/Image/Characters/TheWanderer.jpg",
   },
   // {
   //   name: "Lady Seraphine",
