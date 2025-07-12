@@ -50,7 +50,7 @@ const Book = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-6xl md:text-7xl font-bold text-primary-foreground mb-6">
-                THE BOOK
+                THE NOVEL
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
                 Dive into the depths of knowledge and discover the secrets hidden within these pages.
@@ -70,7 +70,7 @@ const Book = () => {
                         </svg>
                       </div>
                       <h3 className="text-2xl font-bold">THE OTHER SIDE</h3>
-                      <p className="text-sm opacity-75">shattered dreams</p>
+                      <p className="text-sm opacity-75"></p>
                     </div>
                   </div>
                 </Card>
@@ -79,15 +79,15 @@ const Book = () => {
               {/* Book Information */}
               <div className="space-y-8">
                 <Card className="bg-glass-bg border-glass-border backdrop-blur-glass p-6 shadow-glass">
-                  <h3 className="text-2xl font-bold text-primary-foreground mb-4">About This Book</h3>
+                  <h3 className="text-2xl font-bold text-primary-foreground mb-4">About This Novel</h3>
                   <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                  "The crossing has begun, and the Black Castle looms on the horizon... mysterious as an inescapable fate."
+                  The crossing has begun, and the Black Castle looms on the horizon... mysterious as an inescapable fate.
                   </p>
                   <div className="space-y-3 text-primary-foreground/80">
                     <div className="flex justify-between">
                       <span>Pages:</span>
-                      <span className="font-semibold">342</span>
-                    </div>
+                      <span className="font-semibold">342</span>''
+                     </div>
                     <div className="flex justify-between">
                       <span>Genre:</span>
                       <span className="font-semibold">Dark Fantasy</span>
@@ -103,9 +103,15 @@ const Book = () => {
                   <Button variant="hero" className="flex-1">
                     Read Now
                   </Button>
-                  <Button variant="glass" className="flex-1">
-                    Download
-                  </Button>
+                  <a
+  href="https://drive.google.com/uc?export=download&id=1pS5YG3mtQi5aHwSm3dUVhiodW6czedFH"
+  className="flex-1 btn-glass text-white"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Download
+</a>
                 </div>
               </div>
             </div>
@@ -117,7 +123,7 @@ const Book = () => {
               </h2>
               <div className="grid gap-4">
                 {[
-                  { title: "the crossing", description: "Begin the journey into darkness..." },
+                  { title: "the crossing", description: "" },
                   { title: "soon", description: "Coming soon..." },
                 
                 ].map((chapter, index) => (

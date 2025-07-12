@@ -6,23 +6,23 @@ import { useToast } from "@/hooks/use-toast";
 
 const characters = [
   {
-    name: "Eldrin the Wanderer",
-    role: "Mystic Cartographer",
-    description: "A sage who roams the lands, mapping the ever-shifting borders of The Other Side.",
-    image: "/lovable-uploads/2291e679-4d89-4e4a-93b8-06683e063d89.png",
+    name: "The Wanderer",
+    role: "",
+    description: "A nameless figure walking the path, carrying the burden of the past and the future, facing the unknown alone.",
+    image: "/public/Image/Characters/TheWanderer.jpg",
   },
-  {
-    name: "Lady Seraphine",
-    role: "Guardian of the Black Castle",
-    description: "Protector of ancient secrets, her presence is both a blessing and a curse.",
-    image: "/lovable-uploads/819db236-7c8c-4c82-8148-c3d2476ca5e3.png",
-  },
-  {
-    name: "Thorn of the Wilds",
-    role: "Forest Outlaw",
-    description: "A mysterious figure who defends the enchanted woods from intruders.",
-    image: "/lovable-uploads/e5308cdf-d60c-41fc-93f6-19f666eb5953.png",
-  },
+  // {
+  //   name: "Lady Seraphine",
+  //   role: "Guardian of the Black Castle",
+  //   description: "Protector of ancient secrets, her presence is both a blessing and a curse.",
+  //   image: "/lovable-uploads/819db236-7c8c-4c82-8148-c3d2476ca5e3.png",
+  // },
+  // {
+  //   name: "Thorn of the Wilds",
+  //   role: "Forest Outlaw",
+  //   description: "A mysterious figure who defends the enchanted woods from intruders.",
+  //   image: "/lovable-uploads/e5308cdf-d60c-41fc-93f6-19f666eb5953.png",
+  // },
 ];
 
 const Characters = () => {
@@ -70,7 +70,7 @@ const Characters = () => {
                 CHARACTERS OF THE OTHER SIDE
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-                Meet the legendary figures who shape the fate of The Other Side. Each character holds a story, a secret, and a destiny intertwined with the land's magic.
+                Meet the legendary figures who shape the fate of The Other Side. Each character holds a story, a secret, and a destiny intertwined .
               </p>
             </div>
             {/* Characters List */}

@@ -336,7 +336,7 @@ const Chapter = () => {
                   {currentChapter.content.split('\n\n').map((paragraph, index) => (
                     <p 
                       key={index} 
-                      className="text-primary-foreground/90 leading-relaxed mb-8 first-letter:text-6xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:mt-2"
+                      className="text-primary-foreground/90 leading-relaxed mb-8 "
                       style={{ 
                         fontSize: `${fontSize}px`,
                         lineHeight: '1.8'

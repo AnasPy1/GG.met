@@ -56,9 +56,12 @@ const Index = () => {
             
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="hero" size="lg">
-                Enter the Other Side
-              </Button>
+       <a href="/book" className="px-6 py-3 text-white bg-black hover:bg-gray-800 rounded-lg text-lg font-semibold shadow">
+  Enter the Other Side
+</a>
+
+
+
               {/* <Button variant="glass" size="lg">
                 Discover More
               </Button> */}
@@ -67,39 +70,7 @@ const Index = () => {
         </div>
       </div>
       
-      {/* Features Section */}
-      <div className="relative z-20 py-20 bg-gradient-light">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-             Contact Us
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-             
-              ].map((feature, index) => (
-                <Card key={index} className="bg-card border shadow-glass hover:shadow-dark transition-all duration-300 group cursor-pointer">
-                  <div className="relative h-48 overflow-hidden rounded-t-lg">
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center bg-no-repeat group-hover:scale-110 transition-transform duration-500"
-                      style={{ backgroundImage: `url('${feature.image}')` }}
-                    />
-                    <div className="absolute inset-0 bg-hero-overlay group-hover:bg-hero-overlay/50 transition-colors duration-300" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      
       </main>
     </div>
   );

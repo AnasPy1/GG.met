@@ -55,6 +55,14 @@ const Navigation = ({ onTranslate, isTranslating = false, isTranslated = false }
                 Maps
               </Button>
             </Link>
+             <Link to="/ContactSection">
+              <Button 
+                variant={location.pathname === "/ContactSection" ? "default" : "ghost"}
+                className="text-foreground text-white"
+              >
+                Contact 
+              </Button>
+            </Link>
             
             {onTranslate && (
               <div className="relative">

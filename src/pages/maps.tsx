@@ -58,7 +58,7 @@ const Maps = () => {
               <div className="relative">
                 <Card className="bg-glass-bg border-glass-border backdrop-blur-glass p-8 shadow-glass">
                   <div className="aspect-[3/4] bg-gradient-dark rounded-lg flex items-center justify-center">
-                    <img src="/lovable-uploads/e5308cdf-d60c-41fc-93f6-19f666eb5953.png" alt="Map of The Other Side" className="rounded-lg object-cover w-full h-full" />
+                    <img src="/public/Image/Maps/BeyondtheValley.jpg" alt="Map of The Other Side" className="rounded-lg object-cover w-full h-full" />
                   </div>
                 </Card>
               </div>
@@ -72,11 +72,11 @@ const Maps = () => {
                   <div className="space-y-3 text-primary-foreground/80">
                     <div className="flex justify-between">
                       <span>Maps Available:</span>
-                      <span className="font-semibold">3</span>
+                      <span className="font-semibold">1</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Regions:</span>
-                      <span className="font-semibold">North, South, East</span>
+                      <span className="font-semibold">Beyond the Valley</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Last Updated:</span>
@@ -97,13 +97,11 @@ const Maps = () => {
             {/* Regions Preview */}
             <div className="mt-20">
               <h2 className="text-4xl font-bold text-primary-foreground mb-10 text-center">
-                Regions
+                Places
               </h2>
               <div className="grid gap-4">
                 {[
-                  { title: "The Black Castle", description: "A fortress shrouded in darkness and legend." },
-                  { title: "Enchanted Forest", description: "Whispering trees and ancient magic reside here." },
-                  { title: "Forgotten Ruins", description: "Remnants of a lost civilization, echoing with secrets." },
+                  { title: "The Black Castle", description: "The Black Castle appeared on the horizon during the storm, illuminated by thunder for a moment before disappearing again into the darkness. No one approached it, and no one knows what it hides within its walls." },
                 ].map((region, index) => (
                   <Card key={index} className="bg-glass-bg border-glass-border backdrop-blur-glass p-6 shadow-glass hover:bg-glass-bg/20 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center justify-between">
