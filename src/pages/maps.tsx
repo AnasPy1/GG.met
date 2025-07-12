@@ -85,12 +85,12 @@ const Maps = () => {
                   </div>
                 </Card>
                 <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="glass" className="flex-1" asChild>
+                {/* <Button variant="glass" className="flex-1" asChild>
   <a href="#">View Full Map</a>
                 </Button>
                   <Button variant="glass" className="flex-1">
                     Download
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
