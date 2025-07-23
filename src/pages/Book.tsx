@@ -1,9 +1,7 @@
 import Navigation from "@/components/Navigation";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useTranslation } from "@/contexts/TranslationContext";
 import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
 
 const Book = () => {
   const { translate, isTranslating, isTranslated } = useTranslation();
@@ -28,128 +26,51 @@ const Book = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/819db236-7c8c-4c82-8148-c3d2476ca5e3.png')`
-        }}
-      />
-      
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 z-10 bg-hero-overlay" />
-      
+    <div className="min-h-screen bg-background text-text-primary flex flex-col items-center">
       {/* Navigation */}
-      <Navigation onTranslate={handleTranslate} isTranslating={isTranslating} isTranslated={isTranslated} />
-      
+      <div className="w-full absolute top-0 left-0">
+        <Navigation onTranslate={handleTranslate} isTranslating={isTranslating} isTranslated={isTranslated} />
+      </div>
       {/* Content */}
-      <div className="relative z-20 pt-20">
-        <div className="container mx-auto px-6 py-20">
-          <div className="max-w-4xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-6xl md:text-7xl font-bold text-primary-foreground mb-6">
-                THE NOVEL
-              </h1>
-              <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-                Dive into the depths of knowledge and discover the secrets hidden within these pages.
-              </p>
-            </div>
-            
-            {/* Book Details */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Book Cover Placeholder */}
-              <div className="relative">
-                <Card className="bg-glass-bg border-glass-border backdrop-blur-glass p-8 shadow-glass">
-                  <div className="aspect-[3/4] bg-gradient-dark rounded-lg flex items-center justify-center">
-                    <div className="text-center text-primary-foreground">
-                      <div className="w-20 h-20 mx-auto mb-4 opacity-50">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M6 2C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2H6ZM13 3.5L18.5 9H13V3.5Z"/>
-                        </svg>
-                      </div>
-                      <h3 className="text-2xl font-bold">THE OTHER SIDE</h3>
-                      <p className="text-sm opacity-75"></p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-              
-              {/* Book Information */}
-              <div className="space-y-8">
-                <Card className="bg-glass-bg border-glass-border backdrop-blur-glass p-6 shadow-glass">
-                  <h3 className="text-2xl font-bold text-primary-foreground mb-4">About This Novel</h3>
-                  <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                  The crossing has begun, and the Black Castle looms on the horizon... mysterious as an inescapable fate.
-                  </p>
-                  <div className="space-y-3 text-primary-foreground/80">
-                    <div className="flex justify-between">
-                      <span>Pages:</span>
-                      <span className="font-semibold">342</span>''
-                     </div>
-                    <div className="flex justify-between">
-                      <span>Genre:</span>
-                      <span className="font-semibold">Dark Fantasy</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Publication:</span>
-                      <span className="font-semibold">2025</span>
-                    </div>
-                  </div>
-                </Card>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="hero" className="flex-1">
-                    Read Now
-                  </Button>
-                  <a
-  href="https://drive.google.com/uc?export=download&id=1pS5YG3mtQi5aHwSm3dUVhiodW6czedFH"
-  className="flex-1 btn-glass text-white"
-  download
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Download
-</a>
+      <div className="flex-1 w-full flex items-center justify-center px-4 pt-32 animate-fadeIn">
+        <div className="max-w-4xl w-full mx-auto grid md:grid-cols-2 gap-12 items-center">
+          {/* Book Cover Placeholder */}
+          <Card className="bg-card border border-border shadow-glass p-8 flex flex-col items-center justify-center animate-slideUp">
+            <div className="aspect-[3/4] w-48 bg-gradient-to-br from-white/10 to-black/60 rounded-lg flex items-center justify-center">
+              <div className="text-center text-text-primary">
+                <div className="w-20 h-20 mx-auto mb-4 opacity-50">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6 2C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2H6ZM13 3.5L18.5 9H13V3.5Z"/>
+                  </svg>
                 </div>
+                <h3 className="text-2xl font-bold">THE OTHER SIDE</h3>
               </div>
             </div>
-            
-            {/* Chapters Preview */}
-            <div className="mt-20">
-              <h2 className="text-4xl font-bold text-primary-foreground mb-10 text-center">
-                Chapters
-              </h2>
-              <div className="grid gap-4">
-                {[
-                  { title: "the crossing", description: "" },
-                  { title: "soon", description: "Coming soon..." },
-                
-                ].map((chapter, index) => (
-                  <Link key={index} to={`/chapter/${index + 1}`}>
-                    <Card className="bg-glass-bg border-glass-border backdrop-blur-glass p-6 shadow-glass hover:bg-glass-bg/20 transition-all duration-300 cursor-pointer">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="text-xl font-semibold text-primary-foreground">
-                            Chapter {index + 1}: {chapter.title}
-                          </h3>
-                          <p className="text-primary-foreground/60 mt-1">
-                            {chapter.description}
-                          </p>
-                        </div>
-                        <div className="text-primary-foreground/40">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </div>
-                      </div>
-                    </Card>
-                  </Link>
-                ))}
+          </Card>
+          {/* Book Information */}
+          <Card className="bg-card border border-border shadow-glass p-8 animate-slideUp">
+            <h1 className="text-5xl font-extrabold mb-6 text-white">THE NOVEL</h1>
+            <p className="text-lg text-text-secondary mb-6">
+              Dive into the depths of knowledge and discover the secrets hidden within these pages.
+            </p>
+            <div className="space-y-3 text-text-secondary mb-8">
+              <div className="flex justify-between">
+                <span>Pages:</span>
+                <span className="font-semibold text-white">342</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Genre:</span>
+                <span className="font-semibold text-white">Dark Fantasy</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Publication:</span>
+                <span className="font-semibold text-white">2025</span>
               </div>
             </div>
-          </div>
+            <a href="/chapter/1" className="inline-block px-8 py-3 bg-white text-black rounded-lg font-semibold shadow-lg hover:scale-105 hover:bg-opacity-90 transition-transform duration-300 animate-fadeIn">
+              Read Chapter 1
+            </a>
+          </Card>
         </div>
       </div>
     </div>

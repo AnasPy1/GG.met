@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { useTranslation } from "@/contexts/TranslationContext";
 import { useToast } from "@/hooks/use-toast";
 
@@ -27,51 +26,27 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/e5308cdf-d60c-41fc-93f6-19f666eb5953.png')`
-        }}
-      />
-      
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 z-10 bg-hero-overlay" />
-      
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center text-text-primary">
       {/* Navigation */}
-      <Navigation onTranslate={handleTranslate} isTranslating={isTranslating} isTranslated={isTranslated} />
-      
-      {/* Main Content */}
-      <main>
-      
-      {/* Hero Content */}
-      <div className="relative z-20 min-h-screen flex items-center justify-center">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-8 tracking-tight">
-              THE OTHER SIDE 
-            </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-       <a href="/book" className="px-6 py-3 text-white bg-black hover:bg-gray-800 rounded-lg text-lg font-semibold shadow">
-  Enter the Other Side
-</a>
-
-
-
-              {/* <Button variant="glass" size="lg">
-                Discover More
-              </Button> */}
-            </div>
-          </div>
-        </div>
+      <div className="w-full absolute top-0 left-0">
+        <Navigation onTranslate={handleTranslate} isTranslating={isTranslating} isTranslated={isTranslated} />
       </div>
-      
-      
+      {/* Main Content */}
+      <main className="flex flex-col items-center justify-center flex-1 w-full px-4">
+        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight mb-8 animate-fadeIn text-white text-center drop-shadow-lg">
+          THE OTHER SIDE
+        </h1>
+        <p className="text-xl md:text-2xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed text-center animate-slideUp">
+          Step into a world of mystery and darkness. Discover the secrets that lie beyond the veil.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fadeIn">
+          <a href="/book" className="px-8 py-4 bg-white text-black rounded-lg text-lg font-semibold shadow-lg hover:scale-105 hover:bg-opacity-90 transition-transform duration-300">
+            Enter the Other Side
+          </a>
+        </div>
       </main>
+      {/* Subtle animated accent */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-full blur-2xl animate-fadeIn" />
     </div>
   );
 };
